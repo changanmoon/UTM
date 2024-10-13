@@ -30,7 +30,7 @@
           "locale" : "zh_CN"
         },
         {
-          "description" : "一次性的少量捐款。",
+          "description" : "一次性的少量捐贈。",
           "displayName" : "電晶體",
           "locale" : "zh_TW"
         }
@@ -55,7 +55,7 @@
           "locale" : "zh_CN"
         },
         {
-          "description" : "一次性的中等量捐款。",
+          "description" : "一次性的中等量捐贈。",
           "displayName" : "晶片",
           "locale" : "zh_TW"
         }
@@ -80,7 +80,7 @@
           "locale" : "zh_CN"
         },
         {
-          "description" : "一次性的大量捐款。",
+          "description" : "一次性的大量捐贈。",
           "displayName" : "電腦",
           "locale" : "zh_TW"
         }
