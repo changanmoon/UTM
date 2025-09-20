@@ -1,11 +1,11 @@
 #  UTM
 [![Build](https://github.com/utmapp/UTM/workflows/Build/badge.svg?branch=main&event=push)][1]
 
-> 可以發明一個可用於計算任何可計算序列的機器。
+> 可以發明一個用於計算任何可計算序列的機器。
 
--- <cite>艾倫·圖靈（Alan Turing）, 1936 年</cite>
+-- <cite>艾倫·圖靈（Alan Turing），1936 年</cite>
 
-UTM 是一個為 iOS 與 macOS 而設的全功能系統模擬器與虛擬機主機，它基於 QEMU。簡而言之，它允許你在 Mac、iPhone 與 iPad 上執行 Windows、Linux 等。有關更多訊息，請見 https://getutm.app 與 https://mac.getutm.app。
+UTM 是一個為 iOS 與 macOS 而設的全功能系統模擬器與虛擬機主機，它基於 QEMU。簡而言之，它允許你在 Mac、iPhone 與 iPad 上執行 Windows、Linux 等。有關更多訊息，請見 https://getutm.app 與 https://mac.getutm.app
 
 <p align="center">
   <img width="450px" alt="在 iPhone 上執行的 UTM" src="screen.png">
@@ -51,8 +51,8 @@ UTM 亦可以在 macOS 上使用：https://mac.getutm.app/
 
 ## 相關項目
 
-* [iSH][4]: 模擬使用者模式的 Linux 終端介面，用於在 iOS 上執行 x86 Linux 應用程式
-* [a-shell][5]: 為 iOS 原生構建的通用 Unix 命令和實用程式包，可透過終端介面訪問
+* [iSH][4]：模擬使用者模式的 Linux 終端介面，用於在 iOS 上執行 x86 Linux 應用程式
+* [a-shell][5]：為 iOS 原生構建的通用 Unix 命令和實用程式包，可透過終端介面訪問
 
 ## 許可證
 
