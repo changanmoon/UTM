@@ -49,14 +49,14 @@ UTM 亦可以在 macOS 上使用：https://mac.getutm.app/
 
 ### [iOS 開發](Documentation/iOSDevelopment.md)
 
-## 相關
+## 相關項目
 
 * [iSH][4]: 模擬使用者模式的 Linux 終端介面，用於在 iOS 上執行 x86 Linux 應用程式
 * [a-shell][5]: 為 iOS 原生構建的通用 Unix 命令和實用程式包，可透過終端介面訪問
 
 ## 許可證
 
-UTM 於允許的 Apache 2.0 許可證下分發。然而，它使用了幾個 (L)GPL 元件。當中大多數元件為動態連接，但 gstreamer 延伸功能為靜態連接，部分程式碼來自 QEMU。如你打算重新分發此應用程式，請注意這一點。
+UTM 於允許的 Apache 2.0 許可證下分發。然而，它使用了幾個 (L)GPL 元件。當中大多數元件為動態連接，但 gstreamer 延伸功能為靜態連接，部分程式碼來自 QEMU。如你打算重新分發此應用程式，請緊記這一點。
 
 一些圖示由 [Freepik](https://www.freepik.com) 從 [www.flaticon.com](https://www.flaticon.com/) 製作。
 
