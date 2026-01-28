@@ -139,12 +139,12 @@ NS_AVAILABLE_IOS(13.4)
 - (bool)isPointOnVMDisplay:(CGPoint)pos {
     CGSize screenSize = self.mtkView.drawableSize;
     CGSize scaledSize = {
-        self.vmDisplay.displaySize.width * self.vmDisplay.viewportScale,
-        self.vmDisplay.displaySize.height * self.vmDisplay.viewportScale
+        self.vmDisplay.displaySize.width * self.renderer.viewportScale,
+        self.vmDisplay.displaySize.height * self.renderer.viewportScale
     };
     CGRect drawRect = CGRectMake(
-        self.vmDisplay.viewportOrigin.x + screenSize.width/2 - scaledSize.width/2,
-        self.vmDisplay.viewportOrigin.y + screenSize.height/2 - scaledSize.height/2,
+        self.renderer.viewportOrigin.x + screenSize.width/2 - scaledSize.width/2,
+        self.renderer.viewportOrigin.y + screenSize.height/2 - scaledSize.height/2,
         scaledSize.width,
         scaledSize.height
     );
@@ -167,8 +167,8 @@ NS_AVAILABLE_IOS(13.4)
         // Then we need to find out if the pointer is in the actual display area or outside
         CGPoint location = [self.mtkView convertPoint:[request location] fromView:nil];
         CGPoint translated = location;
-        translated.x = CGPointToPixel(translated.x);
-        translated.y = CGPointToPixel(translated.y);
+        translated.x = CGPointToPixel(self.view, translated.x);
+        translated.y = CGPointToPixel(self.view, translated.y);
         
         if ([self isPointOnVMDisplay:translated]) {
             // move vm cursor, hide iOS cursor

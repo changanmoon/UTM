@@ -15,6 +15,7 @@
 //
 
 #import <dlfcn.h>
+#import <TargetConditionals.h>
 #import "UTMLogging.h"
 #import "UTMQemuSystem.h"
 
@@ -103,12 +104,18 @@ static int startQemu(UTMProcess *process, int argc, const char *argv[], const ch
 - (void)setLogging:(QEMULogging *)logging {
     _logging = logging;
     [logging writeLine:[NSString stringWithFormat:@"Launching: qemu-system-%@%@\n", self.architecture, self.arguments]];
+    [logging writeLine:@"Environment variables:\n"];
+    [self.environment enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *value, BOOL *stop) {
+        [logging writeLine:[NSString stringWithFormat:@"    %@=%@\n", key, value]];
+    }];
 }
 
 - (void)setHasDebugLog:(BOOL)hasDebugLog {
     _hasDebugLog = hasDebugLog;
     if (hasDebugLog) {
+#if TARGET_OS_OSX // FIXME: verbose logging is broken on iOS
         self.mutableEnvironment[@"G_MESSAGES_DEBUG"] = @"all";
+#endif
         self.mutableEnvironment[@"VK_LOADER_DEBUG"] = @"all";
         self.mutableEnvironment[@"VIRGL_LOG_LEVEL"] = @"debug";
         self.mutableEnvironment[@"MESA_DEBUG"] = @"1";

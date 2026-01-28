@@ -34,7 +34,6 @@ static const NSInteger kResizeTimeoutSecs = 5;
 
 @interface VMDisplayMetalViewController ()
 
-@property (nonatomic, nullable) CSMetalRenderer *renderer;
 @property (nonatomic, nullable) id debounceResize;
 @property (nonatomic, nullable) id cancelResize;
 @property (nonatomic) BOOL ignoreNextResize;
@@ -42,6 +41,8 @@ static const NSInteger kResizeTimeoutSecs = 5;
 @end
 
 @implementation VMDisplayMetalViewController
+
+@synthesize renderer;
 
 - (instancetype)initWithDisplay:(CSDisplay *)display input:(CSInput *)input {
     if (self = [super initWithNibName:nil bundle:nil]) {
@@ -79,6 +80,7 @@ static const NSInteger kResizeTimeoutSecs = 5;
     
     // Set the view to use the default device
     self.mtkView.frame = self.view.bounds;
+    self.mtkView.drawableSize = self.view.bounds.size;
     self.mtkView.device = MTLCreateSystemDefaultDevice();
     if (!self.mtkView.device) {
         UTMLog(@"Metal is not supported on this device");
@@ -89,11 +91,6 @@ static const NSInteger kResizeTimeoutSecs = 5;
     if (!self.renderer) {
         UTMLog(@"Renderer failed initialization");
         return;
-    }
-    
-    // Initialize our renderer with the view size
-    if ([self integerForSetting:@"QEMURendererFPSLimit"] > 0) {
-        self.mtkView.preferredFramesPerSecond = [self integerForSetting:@"QEMURendererFPSLimit"];
     }
     
     [self.renderer changeUpscaler:self.delegate.qemuDisplayUpscaler
@@ -140,6 +137,19 @@ static const NSInteger kResizeTimeoutSecs = 5;
     [super viewDidAppear:animated];
     self.delegate.displayViewSize = [self convertSizeToNative:self.view.bounds.size];
     [self addObserver:self forKeyPath:@"vmDisplay.displaySize" options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial) context:nil];
+    if ([self integerForSetting:@"QEMURendererFPSLimit"] > 0) {
+        self.mtkView.preferredFramesPerSecond = [self integerForSetting:@"QEMURendererFPSLimit"];
+    }
+#if !TARGET_OS_VISION
+    else if (UIDevice.currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPad) {
+        // only apply ProMotion by default on iPad which has a larger battery
+        // on iPhone, we depend on the user manually setting the FPS limit to 120
+        NSInteger maxFps = self.view.window.screen.maximumFramesPerSecond;
+        if (maxFps > 0) {
+           self.mtkView.preferredFramesPerSecond = maxFps;
+        }
+   }
+#endif
 }
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
@@ -203,8 +213,8 @@ static const NSInteger kResizeTimeoutSecs = 5;
 
 - (CGSize)convertSizeToNative:(CGSize)size {
     if (self.delegate.qemuDisplayIsNativeResolution) {
-        size.width = CGPointToPixel(size.width);
-        size.height = CGPointToPixel(size.height);
+        size.width = CGPointToPixel(self.view, size.width);
+        size.height = CGPointToPixel(self.view, size.height);
     }
     return size;
 }
@@ -235,12 +245,12 @@ static const NSInteger kResizeTimeoutSecs = 5;
 }
 
 - (void)setDisplayScaling:(CGFloat)scaling origin:(CGPoint)origin {
-    self.vmDisplay.viewportOrigin = origin;
+    self.renderer.viewportOrigin = origin;
     if (!self.delegate.qemuDisplayIsNativeResolution) {
-        scaling = CGPointToPixel(scaling);
+        scaling = CGPointToPixel(self.view, scaling);
     }
     if (scaling) { // cannot be zero
-        self.vmDisplay.viewportScale = scaling;
+        self.renderer.viewportScale = scaling;
     }
 }
 
@@ -277,8 +287,8 @@ static const NSInteger kResizeTimeoutSecs = 5;
 #if defined(TARGET_OS_VISION) && TARGET_OS_VISION
     CGSize minSize = displaySize;
     if (self.delegate.qemuDisplayIsNativeResolution) {
-        minSize.width = CGPixelToPoint(minSize.width);
-        minSize.height = CGPixelToPoint(minSize.height);
+        minSize.width = CGPixelToPoint(self.view, minSize.width);
+        minSize.height = CGPixelToPoint(self.view, minSize.height);
     }
     CGSize maxSize = CGSizeMake(UIProposedSceneSizeNoPreference, UIProposedSceneSizeNoPreference);
     UIWindowSceneGeometryPreferencesVision *geoPref = [[UIWindowSceneGeometryPreferencesVision alloc] initWithSize:minSize];

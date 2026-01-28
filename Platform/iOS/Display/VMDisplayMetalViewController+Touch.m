@@ -217,12 +217,12 @@ static CGRect CGRectClipToBounds(CGRect rect1, CGRect rect2) {
 - (CGPoint)clipCursorToDisplay:(CGPoint)pos {
     CGSize screenSize = self.mtkView.drawableSize;
     CGSize scaledSize = {
-        self.vmDisplay.displaySize.width * self.vmDisplay.viewportScale,
-        self.vmDisplay.displaySize.height * self.vmDisplay.viewportScale
+        self.vmDisplay.displaySize.width * self.renderer.viewportScale,
+        self.vmDisplay.displaySize.height * self.renderer.viewportScale
     };
     CGRect drawRect = CGRectMake(
-        self.vmDisplay.viewportOrigin.x + screenSize.width/2 - scaledSize.width/2,
-        self.vmDisplay.viewportOrigin.y + screenSize.height/2 - scaledSize.height/2,
+        self.renderer.viewportOrigin.x + screenSize.width/2 - scaledSize.width/2,
+        self.renderer.viewportOrigin.y + screenSize.height/2 - scaledSize.height/2,
         scaledSize.width,
         scaledSize.height
     );
@@ -238,16 +238,16 @@ static CGRect CGRectClipToBounds(CGRect rect1, CGRect rect2) {
     } else if (pos.y > scaledSize.height) {
         pos.y = scaledSize.height;
     }
-    pos.x /= self.vmDisplay.viewportScale;
-    pos.y /= self.vmDisplay.viewportScale;
+    pos.x /= self.renderer.viewportScale;
+    pos.y /= self.renderer.viewportScale;
     return pos;
 }
 
 - (CGPoint)clipDisplayToView:(CGPoint)target {
     CGSize screenSize = self.mtkView.drawableSize;
     CGSize scaledSize = {
-        self.vmDisplay.displaySize.width * self.vmDisplay.viewportScale,
-        self.vmDisplay.displaySize.height * self.vmDisplay.viewportScale
+        self.vmDisplay.displaySize.width * self.renderer.viewportScale,
+        self.vmDisplay.displaySize.height * self.renderer.viewportScale
     };
     CGRect drawRect = CGRectMake(
         target.x + screenSize.width/2 - scaledSize.width/2,
@@ -310,16 +310,16 @@ static CGRect CGRectClipToBounds(CGRect rect1, CGRect rect2) {
 
 - (void)moveScreen:(UIPanGestureRecognizer *)sender {
     if (sender.state == UIGestureRecognizerStateBegan) {
-        self.lastTwoPanOrigin = self.vmDisplay.viewportOrigin;
+        self.lastTwoPanOrigin = self.renderer.viewportOrigin;
     }
     if (sender.state != UIGestureRecognizerStateCancelled) {
         CGPoint translation = [sender translationInView:sender.view];
-        CGPoint viewport = self.vmDisplay.viewportOrigin;
-        viewport.x = CGPointToPixel(translation.x) + self.lastTwoPanOrigin.x;
-        viewport.y = CGPointToPixel(translation.y) + self.lastTwoPanOrigin.y;
-        self.vmDisplay.viewportOrigin = [self clipDisplayToView:viewport];
+        CGPoint viewport = self.renderer.viewportOrigin;
+        viewport.x = CGPointToPixel(self.view, translation.x) + self.lastTwoPanOrigin.x;
+        viewport.y = CGPointToPixel(self.view, translation.y) + self.lastTwoPanOrigin.y;
+        self.renderer.viewportOrigin = [self clipDisplayToView:viewport];
         // persist this change in viewState
-        self.delegate.displayOrigin = self.vmDisplay.viewportOrigin;
+        self.delegate.displayOrigin = self.renderer.viewportOrigin;
     }
     if (sender.state == UIGestureRecognizerStateEnded) {
         // TODO: decelerate
@@ -362,8 +362,8 @@ static CGRect CGRectClipToBounds(CGRect rect1, CGRect rect2) {
 
 - (CGPoint)moveMouseAbsolute:(CGPoint)location {
     CGPoint translated = location;
-    translated.x = CGPointToPixel(translated.x);
-    translated.y = CGPointToPixel(translated.y);
+    translated.x = CGPointToPixel(self.view, translated.x);
+    translated.y = CGPointToPixel(self.view, translated.y);
     translated = [self clipCursorToDisplay:translated];
     if (!self.vmInput.serverModeCursor) {
         [self.vmInput sendMousePosition:self.mouseButtonDown absolutePoint:translated];
@@ -375,8 +375,8 @@ static CGRect CGRectClipToBounds(CGRect rect1, CGRect rect2) {
 }
 
 - (CGPoint)moveMouseRelative:(CGPoint)translation {
-    translation.x = CGPointToPixel(translation.x) / self.vmDisplay.viewportScale;
-    translation.y = CGPointToPixel(translation.y) / self.vmDisplay.viewportScale;
+    translation.x = CGPointToPixel(self.view, translation.x) / self.renderer.viewportScale;
+    translation.y = CGPointToPixel(self.view, translation.y) / self.renderer.viewportScale;
     if (self.vmInput.serverModeCursor) {
         [self.vmInput sendMouseMotion:self.mouseButtonDown relativePoint:translation];
     } else {
@@ -386,7 +386,7 @@ static CGRect CGRectClipToBounds(CGRect rect1, CGRect rect2) {
 }
 
 - (CGPoint)moveMouseScroll:(CGPoint)translation {
-    translation.y = CGPointToPixel(translation.y) / kScrollSpeedReduction;
+    translation.y = CGPointToPixel(self.view, translation.y) / kScrollSpeedReduction;
     if (self.isInvertScroll) {
         translation.y = -translation.y;
     }
@@ -478,10 +478,11 @@ static CGRect CGRectClipToBounds(CGRect rect1, CGRect rect2) {
         CGFloat scaling;
         if (!self.delegate.qemuDisplayIsNativeResolution) {
             // will be undo in `-setDisplayScaling:origin:`
-            scaling = CGPixelToPoint(CGPointToPixel(self.delegate.displayScale) * sender.scale);
+            scaling = CGPixelToPoint(self.view, CGPointToPixel(self.view, self.delegate.displayScale) * sender.scale);
         } else {
             scaling = self.delegate.displayScale * sender.scale;
         }
+        self.delegate.displayIsZoomLocked = false;
         self.delegate.displayScale = scaling;
         sender.scale = 1.0;
     }
