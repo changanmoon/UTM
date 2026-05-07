@@ -313,6 +313,9 @@ VMDisplayWindowController */
 "Continue" = "继续";
 
 /* No comment provided by engineer. */
+"Copy" = "复制";
+
+/* No comment provided by engineer. */
 "CoreAudio (Output Only)" = "CoreAudio (仅限输出)";
 
 /* No comment provided by engineer. */
