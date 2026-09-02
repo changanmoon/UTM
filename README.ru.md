@@ -1,6 +1,6 @@
 # UTM
 
-[![Статус](https://github.com/utmapp/UTM/workflows/Build/badge.svg?branch=main&event=push)](https://github.com/utmapp/UTM/actions?query=event%3Arelease+workflow%3ABuild)
+[![Статус](https://github.com/utmapp/UTM/actions/workflows/build.yml/badge.svg?branch=main&event=push)](https://github.com/utmapp/UTM/actions?query=event%3Arelease+workflow%3ABuild)
 
 > Возможно изобрести [такую машину](https://ru.wikipedia.org/wiki/Универсальная_машина_Тьюринга), которая справится с любой вычислимой последовательностью.
 
@@ -64,6 +64,6 @@ UTM распространяется по лицензии Apache 2.0.
 
 Некоторые значки взяты с [Flaticon](https://www.flaticon.com/) и сгенерированы с помощью [Freepik](https://www.freepik.com/).
 
-Хостинг для CI предоставлен [MacStadium](https://www.macstadium.com/opensource).
+Хостинг для CI предоставлен [MacStadium](https://macstadium.com/company/opensource).
 
 [<img src="https://uploads-ssl.webflow.com/5ac3c046c82724970fc60918/5c019d917bba312af7553b49_MacStadium-developerlogo.png" alt="MacStadium logo" width="250">](https://www.macstadium.com)

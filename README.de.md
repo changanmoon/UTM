@@ -1,5 +1,5 @@
 #  UTM
-[![Build](https://github.com/utmapp/UTM/workflows/Build/badge.svg?branch=main&event=push)][1]
+[![Build](https://github.com/utmapp/UTM/actions/workflows/build.yml/badge.svg?branch=main&event=push)][1]
 
 > Es ist möglich, eine einzige Maschine zu entwerfen, mit der jede berechenbare Folge berechnet werden kann.
 
@@ -68,7 +68,7 @@ Zusätzlich verwendet das UTM-Frontend die folgenden Komponenten unter der MIT-/
 * [ZIP Foundation](https://github.com/weichsel/ZIPFoundation)
 * [InAppSettingsKit](https://github.com/futuretap/InAppSettingsKit)
 
-Das Hosting für kontinuierliche Integration wird bereitgestellt von [MacStadium](https://www.macstadium.com/opensource)
+Das Hosting für kontinuierliche Integration wird bereitgestellt von [MacStadium](https://macstadium.com/company/opensource)
 
 [<img src="https://uploads-ssl.webflow.com/5ac3c046c82724970fc60918/5c019d917bba312af7553b49_MacStadium-developerlogo.png" alt="MacStadium logo" width="250">](https://www.macstadium.com)
 

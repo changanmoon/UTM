@@ -1,5 +1,5 @@
 #  UTM
-[![Build](https://github.com/utmapp/UTM/workflows/Build/badge.svg?branch=main&event=push)][1]
+[![Build](https://github.com/utmapp/UTM/actions/workflows/build.yml/badge.svg?branch=main&event=push)][1]
 
 > It is possible to invent a single machine which can be used to compute any computable sequence.
 
@@ -67,7 +67,7 @@ Additionally, UTM frontend depends on the following MIT/BSD License components:
 * [ZIP Foundation](https://github.com/weichsel/ZIPFoundation)
 * [InAppSettingsKit](https://github.com/futuretap/InAppSettingsKit)
 
-Continuous integration hosting is provided by [MacStadium](https://www.macstadium.com/opensource)
+Continuous integration hosting is provided by [MacStadium](https://macstadium.com/company/opensource)
 
 [<img src="https://uploads-ssl.webflow.com/5ac3c046c82724970fc60918/5c019d917bba312af7553b49_MacStadium-developerlogo.png" alt="MacStadium logo" width="250">](https://www.macstadium.com)
 

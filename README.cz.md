@@ -1,6 +1,6 @@
 # UTM
 
-[![Build](https://github.com/utmapp/UTM/workflows/Build/badge.svg?branch=main&event=push)][1]
+[![Build](https://github.com/utmapp/UTM/actions/workflows/build.yml/badge.svg?branch=main&event=push)][1]
 
 > Je možné vynalézt jediný stroj, který lze použít k výpočtu libovolné vypočitatelné posloupnosti.
 
@@ -69,7 +69,7 @@ Frontend UTM navíc využívá následující komponenty pod licencí MIT/BSD:
 * [ZIP Foundation](https://github.com/weichsel/ZIPFoundation)
 * [InAppSettingsKit](https://github.com/futuretap/InAppSettingsKit)
 
-Kontinuální hostování integrace zajišťuje [MacStadium](https://www.macstadium.com/opensource).
+Kontinuální hostování integrace zajišťuje [MacStadium](https://macstadium.com/company/opensource).
 
 [<img src="https://uploads-ssl.webflow.com/5ac3c046c82724970fc60918/5c019d917bba312af7553b49_MacStadium-developerlogo.png" alt="Logo de MacStadium" width="250">](https://www.macstadium.com)
 

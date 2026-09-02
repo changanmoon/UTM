@@ -1,5 +1,5 @@
 #  UTM
-[![Build](https://github.com/utmapp/UTM/workflows/Build/badge.svg?branch=main&event=push)][1]
+[![Build](https://github.com/utmapp/UTM/actions/workflows/build.yml/badge.svg?branch=main&event=push)][1]
 
 > Можливо створити єдину машину, яку можна використовувати для обчислення будь-якої обчислювальної послідовності.
 
@@ -67,7 +67,7 @@ UTM розповсюджується на умовах ліцензії Apache 2
 * [ZIP Foundation](https://github.com/weichsel/ZIPFoundation)
 * [InAppSettingsKit](https://github.com/futuretap/InAppSettingsKit)
 
-Хостинг для безперервної інтеграції забезпечується компанією [MacStadium](https://www.macstadium.com/opensource)
+Хостинг для безперервної інтеграції забезпечується компанією [MacStadium](https://macstadium.com/company/opensource)
 
 [<img src="https://uploads-ssl.webflow.com/5ac3c046c82724970fc60918/5c019d917bba312af7553b49_MacStadium-developerlogo.png" alt="MacStadium logo" width="250">](https://www.macstadium.com)
 
