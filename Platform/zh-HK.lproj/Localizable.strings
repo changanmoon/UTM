@@ -1441,7 +1441,7 @@ UTMQemuConstants */
 "The icon named '%@' cannot be found in the built-in icons." = "在內建圖示中找不到名為「%@」的圖示。";
 
 /* UTMSnapshotService */
-"The name '%@' is not a valid snapshot name. Use letters, numbers, and the characters _.- (up to 64 characters)." = "名稱「%@」不是一個有效的快照名稱。請使用字母、数字與底線 (_)、西式句點 (.) 及减號 (-)（最多 64 個字元）。";
+"The name '%@' is not a valid snapshot name. Use letters, numbers, and the characters _.- (up to 64 characters)." = "名稱「%@」不是一個有效的快照名稱。請使用字母、數字與底線 (_)、西式句點 (.) 及減號 (-)（最多 64 個字元）。";
 
 /* UTMSnapshotService */
 "The name '%@' is reserved and cannot be used for a snapshot." = "名稱「%@」已被保留，不能用於快照。";
@@ -1718,7 +1718,7 @@ VMMetalView */
 "Waiting for VM to connect to display..." = "正在等待虛擬機連接至顯示⋯";
 
 /* UTMDonateView */
-"week" = "周";
+"week" = "週";
 
 /* No comment provided by engineer. */
 "Welcome to UTM" = "歡迎使用 UTM";
@@ -2197,7 +2197,7 @@ VMWizardOSMacView */
 "If enabled, a virtiofs share tagged 'rosetta' will be available on the Linux guest for installing Rosetta for emulating x86_64 on ARM64." = "如啟用，Linux 客户端會有一個標記為「rosetta」的 virtiofs 分享，用於在 ARM64 上安裝 Rosetta 以模擬 x86_64。";
 
 /* No comment provided by engineer. */
-"If enabled, all writable drive images will be locked when the VM is running. Read-only drive images will not be locked." = "如啟󠄁用，執行虛擬機时，所有可寫的磁碟映像檔都將會被鎖定。唯讀磁碟映像檔不會被被鎖定。";
+"If enabled, all writable drive images will be locked when the VM is running. Read-only drive images will not be locked." = "如啟󠄁用，執行虛擬機時，所有可寫的磁碟映像檔都將會被鎖定。唯讀磁碟映像檔不會被被鎖定。";
 
 /* No comment provided by engineer. */
 "If enabled, any existing screenshot will be deleted the next time the VM is started." = "如啟用，下次啟動虛擬機時，所有現有的螢幕截圖將會刪除。";
@@ -2680,7 +2680,7 @@ VMWizardOSMacView */
 "This virtual machine must be re-added to UTM by opening it with Finder. You can find it at the path: %@" = "必須以 Finder 開啟此虛擬機，將其重新加至 UTM。你可以透過此路徑找到它：%@";
 
 /* No comment provided by engineer. */
-"This virtual machine uses custom QEMU arguments which is potentially dangerous and can cause damage to your machine. You should only run this virtual machine if you trust it." = "此虛擬機使用自訂 QEMU 引數，可能會存在風險，並可能損毁你的機器。只有當你信任此虛擬機時，才應該執行它。";
+"This virtual machine uses custom QEMU arguments which is potentially dangerous and can cause damage to your machine. You should only run this virtual machine if you trust it." = "此虛擬機使用自訂 QEMU 引數，可能會存在風險，並可能損毀你的機器。只有當你信任此虛擬機時，才應該執行它。";
 
 /* No comment provided by engineer. */
 "To change this, remove the shared directory and add it again." = "如要更改此選項，請移除分享的目錄並重新加回。";
