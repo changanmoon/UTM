@@ -2873,7 +2873,7 @@ VMWizardOSMacView */
 "This virtual machine must be re-added to UTM by opening it with Finder. You can find it at the path: %@" = "必須以 Finder 開啟此虛擬機，將其重新加至 UTM。你可以透過此路徑找到它：%@";
 
 /* No comment provided by engineer. */
-"This virtual machine uses custom QEMU arguments which is potentially dangerous and can cause damage to your machine. You should only run this virtual machine if you trust it." = "此虛擬機使用自訂 QEMU 引數，可能會存在風險，並可能損毁你的機器。只有當你信任此虛擬機時，才應該執行它。";
+"This virtual machine uses custom QEMU arguments which is potentially dangerous and can cause damage to your machine. You should only run this virtual machine if you trust it." = "此虛擬機使用自訂 QEMU 引數，可能會存在風險，並可能損毀你的機器。只有當你信任此虛擬機時，才應該執行它。";
 
 /* No comment provided by engineer. */
 "To change this, remove the shared directory and add it again." = "如要更改此選項，請移除分享的目錄並重新加回。";
@@ -2977,28 +2977,4 @@ VMWizardOSMacView */
 
 /* No comment provided by engineer. */
 "Zoom" = "縮放";
-
-/* VMKeyboardAccessoryView */
-"Up" = "上";
-
-/* VMKeyboardAccessoryView */
-"Down" = "下";
-
-/* VMKeyboardAccessoryView */
-"Left" = "左";
-
-/* VMKeyboardAccessoryView */
-"Right" = "右";
-
-/* VMKeyboardAccessoryView */
-"Num Lock" = "Number Lock";
-
-/* VMKeyboardAccessoryView */
-"Page Up" = "上一頁";
-
-/* VMKeyboardAccessoryView */
-"Page Down" = "下一頁";
-
-/* VMKeyboardAccessoryView */
-"Paste" = "貼上";
 
