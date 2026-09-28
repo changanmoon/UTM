@@ -67,10 +67,10 @@ VMDisplayQemuTerminalWindowController */
 "• " = "• ";
 
 /* UTMAppleDiskImage */
-"A drive cannot be read only once a snapshot has been taken of it." = "在创建了驱动器的快照后，无法设置驱动器为只读。";
+"A drive cannot be read only once a snapshot has been taken of it." = "在创建驱动器的快照后，无法设置驱动器为只读。";
 
 /* UTMAppleDiskImage */
-"A drive cannot be resized once a snapshot has been taken of it." = "在创建了驱动器的快照后，无法调整驱动器的大小。";
+"A drive cannot be resized once a snapshot has been taken of it." = "在创建驱动器的快照后，无法调整驱动器的大小。";
 
 /* AppDelegate */
 "A running VM became unavailable before requesting power down." = "在请求关闭电源之前，正在运行的虚拟机将变为不可用状态。";
@@ -154,10 +154,10 @@ VMDisplayQemuTerminalWindowController */
 "Are you sure you want to permanently delete this disk image?" = "你确定要永久删除此磁盘映像吗？";
 
 /* No comment provided by engineer. */
-"Are you sure you want to reset this VM? Any unsaved changes will be lost." = "你确定要重置此虚拟机吗？任何未保存的更改都将丢失。";
+"Are you sure you want to reset this VM? Any unsaved changes will be lost." = "你确定要重置此虚拟机吗？所有未保存的更改都将丢失。";
 
 /* No comment provided by engineer. */
-"Are you sure you want to stop this VM and exit? Any unsaved changes will be lost." = "你确定要停止此虚拟机并退出吗？任何未保存的更改都将丢失。";
+"Are you sure you want to stop this VM and exit? Any unsaved changes will be lost." = "你确定要停止此虚拟机并退出吗？所有未保存的更改都将丢失。";
 
 /* No comment provided by engineer. */
 "Argument" = "参数";
@@ -263,7 +263,7 @@ VMQemuDisplayMetalWindowController */
 "Cannot reserve port %d for external access from NAT. Make sure no other device on the network has reserved it." = "无法保留端口 %d 用于通过 NAT 的外部访问。确保网络上没有其他设备保留该端口。";
 
 /* VMKeyboardAccessoryView */
-"Caps Lock" = "大写锁定";
+"Caps Lock" = "Caps Lock";
 
 /* No comment provided by engineer. */
 "Caps Lock (⇪) is treated as a key" = "将 Caps Lock (⇪) 视为按键处理";
@@ -309,7 +309,7 @@ UTMQemuConstants */
 "Close" = "关闭";
 
 /* No comment provided by engineer. */
-"Closing the window stops the virtual machine. Any unsaved changes will be lost." = "关闭窗口会停止虚拟机。任何未保存的更改都将丢失。";
+"Closing the window stops the virtual machine. Any unsaved changes will be lost." = "关闭窗口会停止虚拟机。所有未保存的更改都将丢失。";
 
 /* VMQemuDisplayMetalWindowController */
 "Closing this window will kill the VM." = "关闭此窗口将终止虚拟机。";
@@ -511,13 +511,13 @@ VMDisplayQemuDisplayController */
 "Do you want to move this VM to another location? This will copy the data to the new location, delete the data from the original location, and then create a shortcut." = "你要将此虚拟机移动到别处吗？这将会复制数据到新位置，删除原始位置的数据，然后创建一个快捷方式。";
 
 /* No comment provided by engineer. */
-"Do you want to overwrite the snapshot “%@” with the current state of the virtual machine? What it holds now will be lost." = "你要用虚拟机的当前状态覆盖快照“%@”吗？虚拟机现在拥有的快照都将丢失。";
+"Do you want to overwrite the snapshot “%@” with the current state of the virtual machine? What it holds now will be lost." = "你要用虚拟机的当前状态覆盖快照“%@”吗？目前包含的数据都将丢失。";
 
 /* No comment provided by engineer. */
 "Do you want to remove this shortcut? The data will not be deleted." = "你要移除此快捷方式吗？数据不会被删除。";
 
 /* No comment provided by engineer. */
-"Do you want to restore the snapshot “%@”? The current state of the virtual machine will be overwritten and any changes that are not saved as a snapshot will be lost." = "你要恢复快照“%@”吗？虚拟机的当前状态将被覆盖，任何未保存为快照的更改都将丢失。";
+"Do you want to restore the snapshot “%@”? The current state of the virtual machine will be overwritten and any changes that are not saved as a snapshot will be lost." = "你要恢复快照“%@”吗？虚拟机的当前状态将被覆盖，所有未保存为快照的更改都将丢失。";
 
 /* No comment provided by engineer. */
 "Do you wish to reset all saved USB devices?" = "你要重置所有保存的 USB 设备吗？";
@@ -1441,7 +1441,7 @@ UTMQemuConstants */
 "Socket not specified." = "未指定套接字。";
 
 /* UTMData */
-"Space cannot be reclaimed from a drive while it holds snapshots or a suspended state." = "当驱动器拥有快照或处于挂起状态时，空间无法从驱动器中回收。";
+"Space cannot be reclaimed from a drive while it holds snapshots or a suspended state." = "当驱动器包含快照或处于挂起状态时，无法从驱动器中回收空间。";
 
 /* No comment provided by engineer. */
 "Specify the size of the drive where data will be stored into." = "指定将在其中存储数据的驱动器大小。";
@@ -1712,7 +1712,7 @@ VMSnapshotsView */
 "This is not a valid Apple Virtualization configuration." = "并非有效的 Apple 虚拟化配置。";
 
 /* VMDisplayWindowController */
-"This may corrupt the VM and any unsaved changes will be lost. To quit safely, shut down from the guest." = "这可能会损坏虚拟机，任何未保存的更改都将丢失。为了安全退出，请从客户机操作系统关闭。";
+"This may corrupt the VM and any unsaved changes will be lost. To quit safely, shut down from the guest." = "这可能会损坏虚拟机，所有未保存的更改都将丢失。为了安全退出，请从客户机操作系统关闭。";
 
 /* UTMScriptingVirtualMachineImpl */
 "This operation cannot be performed while macOS is being installed." = "安装 macOS 时无法执行此操作。";
@@ -1748,7 +1748,7 @@ VMSnapshotsView */
 "This VM is unavailable." = "此虚拟机不可用。";
 
 /* VMDisplayWindowController */
-"This will reset the VM and any unsaved state will be lost." = "这将重置虚拟机，任何未保存的状态都将丢失。";
+"This will reset the VM and any unsaved state will be lost." = "这将重置虚拟机，所有未保存的状态都将丢失。";
 
 /* AppDelegate */
 "Timed out after 45 seconds waiting for running VMs to stop." = "在等待运行的虚拟机停止的 45 秒后超时。";
@@ -2310,9 +2310,6 @@ VMWizardOSMacView */
 /* No comment provided by engineer. */
 "Hardware OpenGL Acceleration" = "硬件 OpenGL 加速";
 
-/* VMKeyboardAccessoryView */
-"Hide Keyboard" = "隐藏键盘";
-
 /* No comment provided by engineer. */
 "Height" = "高度";
 
@@ -2324,6 +2321,9 @@ VMWizardOSMacView */
 
 /* No comment provided by engineer. */
 "Hide dock icon on next launch" = "下次启动时隐藏程序坞图标";
+
+/* VMKeyboardAccessoryView */
+"Hide Keyboard" = "隐藏键盘";
 
 /* No comment provided by engineer. */
 "Host Address" = "主机地址";
@@ -2977,28 +2977,4 @@ VMWizardOSMacView */
 
 /* No comment provided by engineer. */
 "Zoom" = "缩放";
-
-/* VMKeyboardAccessoryView */
-"Up" = "上";
-
-/* VMKeyboardAccessoryView */
-"Down" = "下";
-
-/* VMKeyboardAccessoryView */
-"Left" = "左";
-
-/* VMKeyboardAccessoryView */
-"Right" = "右";
-
-/* VMKeyboardAccessoryView */
-"Caps Lock" = "Caps Lock";
-
-/* VMKeyboardAccessoryView */
-"Page Up" = "上一页";
-
-/* VMKeyboardAccessoryView */
-"Page Down" = "下一页";
-
-/* VMKeyboardAccessoryView */
-"Paste" = "粘贴";
 
