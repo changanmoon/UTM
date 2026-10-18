@@ -305,7 +305,7 @@ UTMQemuConstants */
 /* No comment provided by engineer. */
 "Cloning" = "製作副本";
 
-/* No comment provided by engineer. */
+/* VMDisplayWindowController */
 "Close" = "關閉";
 
 /* No comment provided by engineer. */
@@ -1239,6 +1239,9 @@ UTMQemuConstants */
 VMQemuDisplayMetalWindowController */
 "Querying USB devices..." = "正在查詢 USB 裝置⋯";
 
+/* AppDelegate */
+"Quit" = "結束";
+
 /* VMQemuDisplayMetalWindowController */
 "Quitting UTM will kill all running VMs." = "結束 UTM 會結束所有執行的虛擬機。";
 
@@ -1419,8 +1422,14 @@ UTMQemuConstants */
 /* No comment provided by engineer. */
 "Show dock icon" = "顯示 Dock 圖示";
 
+/* VMTouchpadView */
+"Show Keyboard" = "顯示鍵盤";
+
 /* No comment provided by engineer. */
 "Show menu bar icon" = "顯示選單列圖示";
+
+/* VMKeyboardAccessoryView */
+"Show Touchpad" = "顯示觸碰板";
 
 /* No comment provided by engineer. */
 "Size" = "大小";
@@ -1649,6 +1658,9 @@ VMSnapshotsView */
 "The USB device '%@' is not connected to this virtual machine." = "USB 裝置「%@」未連接至此虛擬機。";
 
 /* UTMAppleVirtualMachine */
+"The USB device '%@' is not supported for capture by virtual machines." = "USB 裝置「%@」不支援由虛擬機擷取。";
+
+/* UTMAppleVirtualMachine */
 "The username for the guest account is not valid." = "客户端帳户的用户名稱無效。";
 
 /* UTMSnapshotService */
@@ -1767,6 +1779,9 @@ VMSnapshotsView */
 
 /* VMDisplayQemuMetalWindowController */
 "To release the mouse cursor, press %@ at the same time." = "如要放開滑鼠指標，請同時按一下 %@。";
+
+/* VMTouchpadView */
+"Touchpad" = "觸碰板";
 
 /* No comment provided by engineer. */
 "Trust" = "信任";
@@ -2907,6 +2922,9 @@ VMWizardOSMacView */
 
 /* No comment provided by engineer. */
 "Use Apple Virtualization" = "使用 Apple 虛擬化";
+
+/* No comment provided by engineer. */
+"Use Custom Arguments" = "使用自訂引數";
 
 /* No comment provided by engineer. */
 "Use Hypervisor" = "使用 Hypervisor";
