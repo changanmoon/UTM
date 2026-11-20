@@ -1,6 +1,12 @@
 /* No comment provided by engineer. */
 "-option value" = "-option value";
 
+/* UTMUSBDeviceUnmount */
+"'%@' could not be ejected because it is in use. Close anything that is using it and try again." = "無法退出「%@」，因為它正使用中。關閉任何正在使用的應用程式，然後再試。";
+
+/* UTMUSBDeviceUnmount */
+"'%@' could not be ejected. Eject it in the Finder and try again." = "無法退出「%@」。從 Finder 中將其退出，然後重試。";
+
 /* VMDisplayAppleWindowController */
 "'%@' is connected to '%@'. Do you want to disconnect it and connect it to this virtual machine instead?" = "「%1$@」已連接至「%2$@」。你要中斷連線並連接至此虛擬機嗎？";
 
@@ -119,9 +125,6 @@ VMDisplayQemuTerminalWindowController */
 
 /* UTMConfiguration */
 "An invalid value of '%@' is used in the configuration file." = "設定檔內使用了無效值「%@」。";
-
-/* UTMScriptingAppDelegate */
-"An IPSW recovery image must be specified to create a macOS virtual machine." = "必須指定 IPSW 還原映像檔才能製作 macOS 虛擬機。";
 
 /* UTMRemoteSpiceVirtualMachine */
 "An operation is already in progress." = "一項操作已進行中。";
@@ -540,6 +543,9 @@ VMDisplayQemuDisplayController */
 /* No comment provided by engineer. */
 "Download VM" = "下載虛擬機";
 
+/* UTMScriptingVirtualMachineImpl */
+"Downloading the latest IPSW recovery image failed (HTTP %d)." = "下載最新的 IPSW 還原映像檔時發生失敗 (HTTP %d)。";
+
 /* No comment provided by engineer. */
 "Drag and drop IPSW file here" = "拖放 IPSW 檔到這裡";
 
@@ -696,9 +702,6 @@ UTMQemuConstants */
 /* No comment provided by engineer. */
 "Floppy Image" = "軟碟映像檔";
 
-/* No comment provided by engineer. */
-"Font Size" = "字體大小";
-
 /* VMDisplayWindowController */
 "Force kill" = "強制結束";
 
@@ -835,6 +838,9 @@ UTMQemuConstants */
 /* UTMAppleVirtualMachine */
 "Installation failed because macOS %1$@ is newer than macOS %2$@ running on this Mac. Update this Mac to macOS %1$@ or later and try again, or install an older version of macOS." = "安裝失敗，因為 macOS %1$@ 比這台 Mac 上執行的 macOS %2$@ 更新。將這台 Mac 更新至 macOS %1$@ 或以上版本再試，或者安裝舊版的 macOS。";
 
+/* UTMAppleVirtualMachine */
+"Installation failed because the disk this virtual machine is stored on is full (%1$@ available). Free up space on it, or move the virtual machine to a disk with more space, and try again.\n\n%2$@" = "安裝失敗，因為儲存此虛擬機的磁碟已滿 (%1$@ 可用)。釋出儲存空間，或將虛擬機移至有更多空間的磁碟，然後再試。\n\n%2$@";
+
 /* VMDisplayAppleWindowController */
 "Installation: %@" = "安裝：%@";
 
@@ -954,9 +960,6 @@ UTMQemuConstants */
 
 /* UTMQemuConstants */
 "Manual Serial Device (advanced)" = "手動序列裝置 (進階)";
-
-/* No comment provided by engineer. */
-"Maximum Shared USB Devices" = "最多分享 USB 裝置";
 
 /* No comment provided by engineer. */
 "Memory" = "記憶體";
@@ -1333,7 +1336,7 @@ VMQemuDisplayMetalWindowController */
 "Save" = "儲存";
 
 /* No comment provided by engineer. */
-"Save State (Default)" = "儲存狀態（預設）";
+"Save State (Default)" = "儲存狀態 (預設)";
 
 /* No comment provided by engineer. */
 "Save the current state of the virtual machine as a snapshot to return to it later." = "將虛擬機的現時狀態儲存為快照，讓你可以稍後返回。";
@@ -1427,6 +1430,9 @@ UTMQemuConstants */
 
 /* No comment provided by engineer. */
 "Show dock icon" = "顯示 Dock 圖示";
+
+/* VMTouchpadView */
+"Show Keyboard" = "顯示鍵盤";
 
 /* No comment provided by engineer. */
 "Show menu bar icon" = "顯示選單列圖示";
@@ -1700,6 +1706,9 @@ VMSnapshotsView */
 "This build does not emulation." = "此構建不支援模擬。";
 
 /* UTMQemuVirtualMachine */
+"This build of UTM does not have the entitlement for Shared Network, Host Only or Bridged networking. Change the network mode to Emulated VLAN." = "此版的 UTM 未有授權，無法分享網絡、僅主機或橋連網絡。將網絡模式變更為「模擬 VLAN」。";
+
+/* UTMQemuVirtualMachine */
 "This build of UTM does not support emulating the architecture of this VM." = "此 UTM 構建不支援模擬此虛擬機的架構。";
 
 /* VMConfigSystemView */
@@ -1741,6 +1750,9 @@ VMSnapshotsView */
 /* UTMHelperProcess */
 "This operation requires a newer version of iOS." = "此操作需要更新版本的 iOS。";
 
+/* UTMUSBDeviceUnmount */
+"This USB device cannot be connected to the virtual machine." = "此 USB 裝置無法連線至虛擬機。";
+
 /* UTMDataExtension */
 "This virtual machine cannot be run on this machine." = "此虛擬機無法在電腦上執行。";
 
@@ -1752,9 +1764,6 @@ VMSnapshotsView */
 
 /* No comment provided by engineer. */
 "This virtual machine has been removed." = "此虛擬機已移除。";
-
-/* UTMScriptingVirtualMachineImpl */
-"This virtual machine has no IPSW recovery image configured, so there is nothing to install from." = "此虛擬機未有配置 IPSW 還原映像檔，因此沒有可供安裝的軟件。";
 
 /* UTMDataExtension */
 "This virtual machine is already running. In order to run it from this device, you must stop it first." = "此虛擬機已在執行。為了從此裝置執行，你必須先停止它。";
@@ -1788,6 +1797,9 @@ VMSnapshotsView */
 
 /* VMDisplayQemuMetalWindowController */
 "To release the mouse cursor, press %@ at the same time." = "如要放開滑鼠指標，請同時按一下 %@。";
+
+/* VMTouchpadView */
+"Touchpad" = "觸碰板";
 
 /* No comment provided by engineer. */
 "Trust" = "信任";
@@ -1985,6 +1997,9 @@ VMWizardOSMacView */
 
 /* No comment provided by engineer. */
 "Allows passing through additional input from trackpads. Only supported on macOS 13+ guests." = "允許透過觸控板額外輸入。只支援 macOS 13+ 客户端。";
+
+/* UTMScriptingAppDelegate */
+"An IPSW recovery image must be specified to create a macOS virtual machine." = "必須指定 IPSW 還原映像檔才能製作 macOS 虛擬機。";
 
 /* No comment provided by engineer. */
 "Any" = "任意";
@@ -2293,6 +2308,9 @@ VMWizardOSMacView */
 "Font" = "字體";
 
 /* No comment provided by engineer. */
+"Font Size" = "字體大小";
+
+/* No comment provided by engineer. */
 "Force Disable CPU Flags" = "強制停用 CPU 標記";
 
 /* No comment provided by engineer. */
@@ -2499,6 +2517,9 @@ VMWizardOSMacView */
 
 /* No comment provided by engineer. */
 "Maintenance" = "維護";
+
+/* No comment provided by engineer. */
+"Maximum Shared USB Devices" = "最多分享 USB 裝置";
 
 /* No comment provided by engineer. */
 "Mode" = "模式";
@@ -2892,6 +2913,9 @@ VMWizardOSMacView */
 
 /* No comment provided by engineer. */
 "This virtual machine cannot be found at: %@" = "無法在此位置找到這個虛擬機：%@";
+
+/* UTMScriptingVirtualMachineImpl */
+"This virtual machine has no IPSW recovery image configured, so there is nothing to install from." = "此虛擬機未有配置 IPSW 還原映像檔，因此沒有可供安裝的軟件。";
 
 /* No comment provided by engineer. */
 "This virtual machine must be re-added to UTM by opening it with Finder. You can find it at the path: %@" = "必須以 Finder 開啟此虛擬機，將其重新加至 UTM。你可以透過此路徑找到它：%@";
